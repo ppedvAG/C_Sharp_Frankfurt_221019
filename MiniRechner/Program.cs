@@ -29,6 +29,7 @@ namespace MiniRechner
             double min = Math.Min(zahl1, zahl2);
             double erg = max / min;
             Console.WriteLine($"{max} / {min} = {erg}");
+
             //Alternative:
             Console.WriteLine($"{Math.Max(zahl1, zahl2)} / {Math.Min(zahl1, zahl2)} = {Math.Max(zahl1, zahl2) / Math.Min(zahl1, zahl2)}");
 

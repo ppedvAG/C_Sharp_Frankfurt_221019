@@ -70,7 +70,7 @@ neue Zeile.");
             double erg = 5.7 / 0;
             Console.WriteLine(erg);
 
-            //Programmpause
+            //Programmpause (nur für Debug-Mode benötigt)
             Console.ReadKey();
         }
     }
