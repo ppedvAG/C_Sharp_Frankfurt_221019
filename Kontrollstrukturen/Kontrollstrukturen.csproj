@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{82980550-F640-4583-9FB1-25D494058339}</ProjectGuid>
+    <ProjectGuid>{618AB31E-0DA4-47E7-8921-AB400EE58E59}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>MiniRechner</RootNamespace>
-    <AssemblyName>MiniRechner</AssemblyName>
+    <RootNamespace>Kontrollstrukturen</RootNamespace>
+    <AssemblyName>Kontrollstrukturen</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
