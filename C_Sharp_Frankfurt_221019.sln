@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29215.179
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorld", "HelloWorld\HelloWorld.csproj", "{E4D23692-6A7C-451D-B9F4-A6B69BC29561}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modul1_HelloWorld", "HelloWorld\Modul1_HelloWorld.csproj", "{E4D23692-6A7C-451D-B9F4-A6B69BC29561}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniRechner", "MiniRechner\MiniRechner.csproj", "{A7A30202-34C9-45B8-BE76-F96E1BFB98DE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uebung1_MiniRechner", "MiniRechner\Uebung1_MiniRechner.csproj", "{A7A30202-34C9-45B8-BE76-F96E1BFB98DE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

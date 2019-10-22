@@ -25,7 +25,7 @@ namespace MiniRechner
             Console.WriteLine($"Summe als Double: {zahl1 + zahl2}\n");
 
             //Berechnung und Ausgabe der Division:
-            double max = Math.Max(zahl1, zahl2);
+            Double max = Math.Max(zahl1, zahl2);
             double min = Math.Min(zahl1, zahl2);
             double erg = max / min;
             Console.WriteLine($"{max} / {min} = {erg}");
