@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modul1_HelloWorld", "HelloW
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uebung1_MiniRechner", "MiniRechner\Uebung1_MiniRechner.csproj", "{A7A30202-34C9-45B8-BE76-F96E1BFB98DE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniRechner", "MiniRechner\MiniRechner.csproj", "{A7A30202-34C9-45B8-BE76-F96E1BFB98DE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
