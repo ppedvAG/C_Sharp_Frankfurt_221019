@@ -54,7 +54,9 @@ namespace Enumeratoren
             int a = 11;
             switch (a)
             {
-                case var b when b > 10:
+                //a wird in b eingelegt (zu überprüfende Variable wir für Bedingungsprüfung vorbereitet)
+                //und mittels when auf eine Eigenschaft geprüft
+                case int b when b > 10:
                     Console.WriteLine("Hallo");
                     break;
                 default:
