@@ -33,6 +33,7 @@ namespace Taschenrechner
 
             //Aufruf der Berechne()-Funktion mit Übergabe der Zahlen und der gewählten Operation und Speichern des Rückgabewerts
             ergebnis = Berechne(zahl1, zahl2, op);
+
             if (double.IsNaN(ergebnis))
                 Console.WriteLine("Fehlerhafte Eingabe");
             else
