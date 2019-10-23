@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modul02_Zufallszahlenuebung
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab02_Lotto", "Uebung02_Lotto\Lab02_Lotto.csproj", "{1E94DC93-5EDF-4753-92C8-B78980706EFD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modul03_Enumeratoren", "Enumeratoren\Modul03_Enumeratoren.csproj", "{4EB9DB0F-6C95-4E22-A724-E232397F4891}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{1E94DC93-5EDF-4753-92C8-B78980706EFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1E94DC93-5EDF-4753-92C8-B78980706EFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1E94DC93-5EDF-4753-92C8-B78980706EFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4EB9DB0F-6C95-4E22-A724-E232397F4891}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EB9DB0F-6C95-4E22-A724-E232397F4891}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EB9DB0F-6C95-4E22-A724-E232397F4891}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EB9DB0F-6C95-4E22-A724-E232397F4891}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
