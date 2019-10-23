@@ -7,8 +7,19 @@ using System.Threading.Tasks;
 namespace Fahrzeugpark
 {
     //KLASSEN sind Vorlagen für OOP-Objekte. Hier wird das Aussehen, das Verhalten und der Startzustand für Objekte dieses Typs definiert.
-    public class Fahrzeug
+    //Von einer als ABSTRACT gesetzten Klasse können keine Objekte instanziiert werden. Sie ist rein zur Vererbung gedacht.
+    public abstract class Fahrzeug
     {
+        #region Statische Member
+        //Als STATIC markierte Variablen und Methoden hängen an der Klasse selbst und nicht an instanziierten Objekten.
+        public static int AnzahlFahrzeuge { get; set; } = 0;
+
+        public static string ZeigeAnzahlFahrzeuge()
+        {
+            return "Es wurden " + AnzahlFahrzeuge + " Fahrzeuge produziert.";
+        }
+        #endregion
+
         #region Felder und Eigenschaften
         //FELDER (Membervariablen) sind die Variablen einzelner Objekte, welche die Zustände dieser Objekte definieren
         private int maxGeschwindigkeit;
@@ -42,6 +53,15 @@ namespace Fahrzeugpark
             this.Preis = preis;
             this.AktGeschwindigkeit = 0;
             this.MotorLäuft = false;
+
+            AnzahlFahrzeuge++;
+        }
+
+        //Es können mehrere Konstruktoren definiert werden, welche unterschiedliche Übergabeparameter haben (Überladung). Ein Konstruktor, der keine
+        //Übergabeparameter hat, wird als Basiskonstruktor bezeichnet
+        public Fahrzeug()
+        {
+
         }
 
         //Der DESTRUKTOR wird von der GarbageCollection aufgerufen, wenn ein Objekt aus dem Speicher gelöscht wird. Der Destruktor wird 
@@ -79,13 +99,25 @@ namespace Fahrzeugpark
             this.AktGeschwindigkeit = 0;
         }
 
-        public string BeschreibeMich()
+        //Eine als VIRTUAL gesetzte Methode erlaubt den Kindklassen diese per OVERRIDE zu überschreiben
+        public virtual string  BeschreibeMich()
         {
             if (this.MotorLäuft)
-                return $"Das Fahrzeug '{this.Name}' fährt mit {this.AktGeschwindigkeit} von {this.MaxGeschwindigkeit}km/h und kostet {this.Preis}€.";
+                return $" '{this.Name}' fährt mit {this.AktGeschwindigkeit} von {this.MaxGeschwindigkeit}km/h und kostet {this.Preis}€. ";
             else
-                return $"Das Fahrzeug '{this.Name}' könnte mit {this.MaxGeschwindigkeit} km/h fahren und kostet {this.Preis}€.";
-        } 
+                return $" '{this.Name}' könnte mit {this.MaxGeschwindigkeit} km/h fahren und kostet {this.Preis}€. ";
+        }
+
+        //Die ToString()-Methode wird von der object-Klasse an alle anderen Klassen vererbt. Sie wird immer dann aufgerufen, wenn ein Objekt als
+        //String dargestellt werden soll
+        public override string ToString()
+        {
+            return this.BeschreibeMich();
+        }
+
+        //Eine als ABSTRACT gesetzte Methode (nur in abstrakten Klassen möglich) beseht nur aus einem Methodenkopf und zwingt erbende
+        //Klassen diese Methode zu implementieren
+        public abstract void Hupe();
         #endregion
 
     }

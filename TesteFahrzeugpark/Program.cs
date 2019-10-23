@@ -42,21 +42,36 @@ namespace TesteFahrzeugpark
 
             #region Lab04 Fahrzeug_Klasse
 
-            //Deklaration einer Fahrzeug-Variablen und Initialisierung mittels einer Fahrzeug-Instanz
-            Fahrzeug fz1 = new Fahrzeug("Mercedes", 190, 23000);
-            //Ausführen der BeschreibeMich()-Methode des Fahrzeugs und Ausgabe in der Konsole
-            Console.WriteLine(fz1.BeschreibeMich());
+            ////Deklaration einer Fahrzeug-Variablen und Initialisierung mittels einer Fahrzeug-Instanz
+            //Fahrzeug fz1 = new Fahrzeug("Mercedes", 190, 23000);
+            ////Ausführen der BeschreibeMich()-Methode des Fahrzeugs und Ausgabe in der Konsole
+            //Console.WriteLine(fz1.BeschreibeMich());
 
-            //Diverse Methodenausführungen
-            fz1.StarteMotor();
-            fz1.Beschleunige(120);
-            Console.WriteLine(fz1.BeschreibeMich());
+            ////Diverse Methodenausführungen
+            //fz1.StarteMotor();
+            //fz1.Beschleunige(120);
+            //Console.WriteLine(fz1.BeschreibeMich());
 
-            fz1.Beschleunige(300);
-            Console.WriteLine(fz1.BeschreibeMich());
+            //fz1.Beschleunige(300);
+            //Console.WriteLine(fz1.BeschreibeMich());
 
-            fz1.StoppeMotor();
-            Console.WriteLine(fz1.BeschreibeMich());
+            //fz1.StoppeMotor();
+            //Console.WriteLine(fz1.BeschreibeMich());
+
+            #endregion
+
+            #region Lab05 PKW-, Schiff- und Flugzeug-Klasse
+
+            PKW pkw1 = new PKW("BMW", 250, 23000, 5);
+            Console.WriteLine(pkw1.BeschreibeMich());
+
+            Schiff schiff1 = new Schiff("Titanic", 40, 3500000, Schiff.SchiffsTreibstoff.Dampf);
+            Console.WriteLine(schiff1.BeschreibeMich());
+
+            Flugzeug flugzeug1 = new Flugzeug("Boing", 750, 3000000, 9990);
+            Console.WriteLine(flugzeug1.BeschreibeMich());
+
+            Console.WriteLine(Fahrzeug.ZeigeAnzahlFahrzeuge());
 
             #endregion
 
