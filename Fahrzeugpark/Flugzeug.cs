@@ -7,14 +7,16 @@ using System.Threading.Tasks;
 namespace Fahrzeugpark
 {
     
-    public class Flugzeug : Fahrzeug
+    public class Flugzeug : Fahrzeug, IBewegbar
     {
         //vgl. auch PKW
         public int MaxFlughöhe { get; set; }
+        public int AnzahlRaeder { get; set; }
 
         public Flugzeug(string name, int maxG, decimal preis, int maxFH) : base(name, maxG, preis)
         {
             this.MaxFlughöhe = maxFH;
+            this.AnzahlRaeder = 8;
         }
 
         public override string BeschreibeMich()
@@ -25,6 +27,12 @@ namespace Fahrzeugpark
         public override void Hupe()
         {
             Console.WriteLine("BiepBiep");
+        }
+
+        public void Crash()
+        {
+            Console.WriteLine("Da war ein Vogel im Weg");
+            this.MaxFlughöhe -= 1000;
         }
     }
 }
