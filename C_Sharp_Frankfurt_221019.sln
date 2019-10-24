@@ -25,9 +25,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modul04.2f_TesteFahrzeugpar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modul04.3_ClassVSStruct", "ClassVSStruct\Modul04.3_ClassVSStruct.csproj", "{9BEF3C90-CA4E-4B2E-9561-2B7953E3A3E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionHandling", "ExceptionHandling\ExceptionHandling.csproj", "{E2425454-0F88-444B-AC40-406F620F68C4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modul08.1_ExceptionHandling", "ExceptionHandling\Modul08.1_ExceptionHandling.csproj", "{E2425454-0F88-444B-AC40-406F620F68C4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestFahrzeugpark", "UnitTestFahrzeugpark\UnitTestFahrzeugpark.csproj", "{9DC39D40-BBC3-413F-90B7-ED20C42BF254}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modul08.2_UnitTestFahrzeugpark", "UnitTestFahrzeugpark\Modul08.2_UnitTestFahrzeugpark.csproj", "{9DC39D40-BBC3-413F-90B7-ED20C42BF254}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modul09.1_Delegates", "Delegates\Modul09.1_Delegates.csproj", "{311A9FBB-1FD6-4007-A7CA-D6E91CDF76E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modul09.2_EventHandling", "EventHandling\Modul09.2_EventHandling.csproj", "{2FB7208A-7E8B-4614-80C1-F7F98B826A43}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +91,14 @@ Global
 		{9DC39D40-BBC3-413F-90B7-ED20C42BF254}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9DC39D40-BBC3-413F-90B7-ED20C42BF254}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9DC39D40-BBC3-413F-90B7-ED20C42BF254}.Release|Any CPU.Build.0 = Release|Any CPU
+		{311A9FBB-1FD6-4007-A7CA-D6E91CDF76E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{311A9FBB-1FD6-4007-A7CA-D6E91CDF76E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{311A9FBB-1FD6-4007-A7CA-D6E91CDF76E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{311A9FBB-1FD6-4007-A7CA-D6E91CDF76E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FB7208A-7E8B-4614-80C1-F7F98B826A43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FB7208A-7E8B-4614-80C1-F7F98B826A43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FB7208A-7E8B-4614-80C1-F7F98B826A43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FB7208A-7E8B-4614-80C1-F7F98B826A43}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
