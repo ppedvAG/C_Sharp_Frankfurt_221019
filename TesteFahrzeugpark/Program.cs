@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -101,15 +102,136 @@ namespace TesteFahrzeugpark
 
             #region Lab06 IBeladbar
 
-            PKW pkw1 = new PKW("BMW", 250, 23000, 5);
-            Flugzeug flugzeug1 = new Flugzeug("Boing", 750, 3000000, 9990);
-            Schiff schiff1 = new Schiff("Titanic", 40, 3500000, Schiff.SchiffsTreibstoff.Dampf);
+            //PKW pkw1 = new PKW("BMW", 250, 23000, 5);
+            //Flugzeug flugzeug1 = new Flugzeug("Boing", 750, 3000000, 9990);
+            //Schiff schiff1 = new Schiff("Titanic", 40, 3500000, Schiff.SchiffsTreibstoff.Dampf);
 
-            BeladeFahrzeuge(pkw1, flugzeug1);
-            BeladeFahrzeuge(flugzeug1, schiff1);
-            BeladeFahrzeuge(schiff1, pkw1);
+            //BeladeFahrzeuge(pkw1, flugzeug1);
+            //BeladeFahrzeuge(flugzeug1, schiff1);
+            //BeladeFahrzeuge(schiff1, pkw1);
 
-            Console.WriteLine("\n" + schiff1.BeschreibeMich());
+            //Console.WriteLine("\n" + schiff1.BeschreibeMich());
+
+            #endregion
+
+            #region Modul07 Generische Listen
+
+            ////Deklaration und Initialisierung einer Liste von Strings
+            //List<string> Staedteliste = new List<string>();
+
+            ////Ausgabe der Länge der LIste
+            //Console.WriteLine(Staedteliste.Count);
+
+            ////Hinzufügen von Listeneinträgen
+            //Staedteliste.Add("Frankfurt");
+            //Staedteliste.Add("Berlin");
+            //Staedteliste.Add("Köln");
+            //Staedteliste.Add("München");
+            //Staedteliste.Add("Hamburg");
+
+            //Console.WriteLine(Staedteliste.Count);
+
+            ////Ausgabe der 4. Listenposition
+            //Console.WriteLine(Staedteliste[3]);
+
+            ////Manipulation der 4. Listenposition
+            //Staedteliste[3] = "Dresden";
+
+            ////Schleife über die Liste
+            //foreach (var item in Staedteliste)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            ////Löschen des Eintrags 'Köln' (Nachfolgende Einträge rücken nach oben)
+            //Staedteliste.Remove("Köln");
+
+
+            ////Deklaration und Initialisierung eines Dictionarys (Key: Int, Value: String)
+            //Dictionary<int, string> Dict = new Dictionary<int, string>();
+
+            ////Hinzufügen von Dictionary-Einträgen
+            //Dict.Add(1, "Hallo");
+            //Dict.Add(5, "Moin");
+            //Dict.Add(15, "Servus");
+
+            ////Ausgabe des Eintrags mit Key '5'
+            //Console.WriteLine(Dict[5]);
+
+            ////Schleife über Dictionary
+            //foreach (KeyValuePair<int, string> item in Dict)
+            //{
+            //    Console.WriteLine($"{item.Key}: {item.Value}");
+            //}
+
+            ////Deklaration und Initialisierung eines Hastables
+            //Hashtable ht = new Hashtable();
+
+            ////Hinzufügen von Einträgen
+            //ht.Add("Hallo", "Tschüss");
+            //ht.Add(45, "Moin"); 
+            #endregion
+
+            #region Lab07_ZufälligeFahrzeuglisten
+
+            //Deklaration der benötigten Variablen und und Initialisierung mit Instanzen der benötigten Objekte
+            Random generator = new Random();
+            Queue<Fahrzeug> fzQueue = new Queue<Fahrzeug>();
+            Stack<Fahrzeug> fzStack = new Stack<Fahrzeug>();
+            Dictionary<Fahrzeug, Fahrzeug> fzDict = new Dictionary<Fahrzeug, Fahrzeug>();
+            //Deklaration und Initialisierung einer Variablen zur Bestimmung der Anzahl der Durchläufe 
+            int AnzahlFZs = 10;
+
+            //Schleife zur zufälligen Befüllung von Queue und Stack
+            for (int i = 0; i < AnzahlFZs; i++)
+            {
+                //Würfeln einer zufälligen Zahl im Switch
+                switch (generator.Next(1, 4))
+                {
+                    //Erzeugung von Objekten je nach zufälliger Zahl
+                    case 1:
+                        fzQueue.Enqueue(new Flugzeug($"Boing_Q{i}", 800, 3600000, 9999));
+                        fzStack.Push(new Flugzeug($"Boing_S{i}", 800, 3600000, 9999));
+                        break;
+                    case 2:
+                        fzQueue.Enqueue(new Schiff($"Titanic_Q{i}", 40, 3500000, Schiff.SchiffsTreibstoff.Dampf));
+                        fzStack.Push(new Schiff($"Titanic_S{i}", 40, 3500000, Schiff.SchiffsTreibstoff.Dampf));
+                        break;
+                    case 3:
+                        fzQueue.Enqueue(PKW.ErzeugeZufälligenPKW($"_Q{i}"));
+                        fzStack.Push(PKW.ErzeugeZufälligenPKW($"_S{i}"));
+                        break;
+                }
+            }
+
+            //Schleife zur Prüfung auf das Interface und Befüllung des Dictionaries
+            for (int i = 0; i < AnzahlFZs; i++)
+            {
+                //Prüfung, ob das Interface vorhanden ist (mittels Peek(), da die Objekte noch benötigt werden)...
+                if (fzQueue.Peek() is IBeladbar)
+                {
+                    //...wenn ja, dann Cast in das Interface und Ausführung der Belade()-Methode (mittels Peek())...
+                    ((IBeladbar)fzQueue.Peek()).Belade(fzStack.Peek());
+                    //...sowie Hinzufügen zum Dictionary (mittels Pop()/Dequeue(), um beim nächsten Durchlauf andere Objekte an den Spitzen zu haben)
+                    fzDict.Add(fzQueue.Dequeue(), fzStack.Pop());
+                }
+                else
+                {
+                    //... wenn nein, dann Löschung der obersten Objekte (mittels Pop()/Dequeue())
+                    fzQueue.Dequeue();
+                    fzStack.Pop();
+                }
+            }
+
+            //Programmpause
+            Console.ReadKey();
+            Console.WriteLine("\n----------LADELISTE----------");
+
+            //Schleife zur Ausgabe des Dictionaries
+            foreach (var item in fzDict)
+            {
+                Console.WriteLine($"'{item.Key.Name}' hat '{item.Value.Name}' geladen.");
+            }
 
             #endregion
 

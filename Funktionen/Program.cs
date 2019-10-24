@@ -37,6 +37,14 @@ namespace Funktionen
             return summe;
         }
 
+        //Das OUT-Stichwort ermöglich einer Methode mehr als einen Rückgabewert zu haben. Dabei kann die Variable direkt in der Funktions-
+        ///übergabe deklariert werden
+        public static int AddiereUndSubtrahiere(out int differenz, int a, int b)
+        {
+            differenz = a - b;
+            return a + b;
+        }
+
         static void Main(string[] args)
         {
             //Aufruf der Addiere(int,int)-Funktion (optinale Parameter werden auf ihren Default-Wert gesetzt)
@@ -55,6 +63,24 @@ namespace Funktionen
             summe = AddiereBeliebigeAnzahl(new int[] { 2, 4, 5 });
             summe = AddiereBeliebigeAnzahl(7, 8, 9, 45, 12, 741);
             summe = AddiereBeliebigeAnzahl();
+
+            //Aufruf der Out-Funktion
+            summe = AddiereUndSubtrahiere(out int diff, 45, 12);
+
+            Console.WriteLine("Summe: " + summe + "\nDifferenz: " + diff);
+            
+            //TryParse() als Bsp für Out-Verwendung
+            if (int.TryParse("23", out int ergebnis))
+            {
+                Console.WriteLine(ergebnis*2);
+            }
+
+            //Gegenbeispiel: Parse mit Prüfung (ohne TryParse)
+            string eingabe = "klö";
+            if (eingabe.All(x => char.IsDigit(x)))
+            {
+                Console.WriteLine(int.Parse(eingabe) * 2);
+            }
 
             Console.ReadKey();
         }

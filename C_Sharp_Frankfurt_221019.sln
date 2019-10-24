@@ -19,9 +19,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modul03.2_Funktionen", "Fun
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab03_Taschenrechner", "Taschenrechner\Lab03_Taschenrechner.csproj", "{25902F41-9F0A-4229-9A29-426B1B35C99D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modul04f.1Fahrzeugpark", "Fahrzeugpark\Modul04f.1Fahrzeugpark.csproj", "{D8F7899B-7117-4324-A403-F5681A338C4F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modul04.1fFahrzeugpark", "Fahrzeugpark\Modul04.1fFahrzeugpark.csproj", "{D8F7899B-7117-4324-A403-F5681A338C4F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modul04f.2_TesteFahrzeugpark", "TesteFahrzeugpark\Modul04f.2_TesteFahrzeugpark.csproj", "{E54A822F-DAD3-43D4-B4AB-D90BFE1BDF6B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modul04.2f_TesteFahrzeugpark", "TesteFahrzeugpark\Modul04.2f_TesteFahrzeugpark.csproj", "{E54A822F-DAD3-43D4-B4AB-D90BFE1BDF6B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modul04.3_ClassVSStruct", "ClassVSStruct\Modul04.3_ClassVSStruct.csproj", "{9BEF3C90-CA4E-4B2E-9561-2B7953E3A3E9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,10 @@ Global
 		{E54A822F-DAD3-43D4-B4AB-D90BFE1BDF6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E54A822F-DAD3-43D4-B4AB-D90BFE1BDF6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E54A822F-DAD3-43D4-B4AB-D90BFE1BDF6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BEF3C90-CA4E-4B2E-9561-2B7953E3A3E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BEF3C90-CA4E-4B2E-9561-2B7953E3A3E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BEF3C90-CA4E-4B2E-9561-2B7953E3A3E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BEF3C90-CA4E-4B2E-9561-2B7953E3A3E9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

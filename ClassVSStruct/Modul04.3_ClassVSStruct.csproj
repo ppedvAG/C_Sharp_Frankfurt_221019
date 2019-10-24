@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E54A822F-DAD3-43D4-B4AB-D90BFE1BDF6B}</ProjectGuid>
+    <ProjectGuid>{9BEF3C90-CA4E-4B2E-9561-2B7953E3A3E9}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>TesteFahrzeugpark</RootNamespace>
-    <AssemblyName>TesteFahrzeugpark</AssemblyName>
+    <RootNamespace>ClassVSStruct</RootNamespace>
+    <AssemblyName>ClassVSStruct</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -48,12 +48,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Fahrzeugpark\Modul04f.1Fahrzeugpark.csproj">
-      <Project>{d8f7899b-7117-4324-a403-f5681a338c4f}</Project>
-      <Name>Modul04f.1Fahrzeugpark</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
