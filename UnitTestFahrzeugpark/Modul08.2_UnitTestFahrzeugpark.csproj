@@ -56,9 +56,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Fahrzeugpark\Modul04.1fFahrzeugpark.csproj">
+    <ProjectReference Include="..\Fahrzeugpark\Modul04.1f_Fahrzeugpark.csproj">
       <Project>{d8f7899b-7117-4324-a403-f5681a338c4f}</Project>
-      <Name>Modul04.1fFahrzeugpark</Name>
+      <Name>Modul04.1f_Fahrzeugpark</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />

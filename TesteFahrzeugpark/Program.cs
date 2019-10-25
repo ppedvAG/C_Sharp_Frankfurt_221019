@@ -235,6 +235,28 @@ namespace TesteFahrzeugpark
 
             #endregion
 
+            //Erstellung von Bsp-Objekten
+            Fahrzeug fz1 = new PKW("BMW", 250, 30000, 4);
+            Fahrzeug fz2 = fz1;
+            Flugzeug flugzeug1 = new Flugzeug("Boing", 890, 3000000, 9999);
+
+            //Bsp für die Verwendung der in der Fahrzeug-Klasse definierten Operatoren
+            Console.WriteLine(fz1 == fz2);
+            Console.WriteLine(fz1 == flugzeug1);
+
+            //Bsp für die Verwendung von IEnumerable
+            foreach (var item in flugzeug1)
+            {
+                Console.WriteLine(item);
+            }
+
+            //Bsp für die Verwendung der Indexer-Property
+            Console.WriteLine(flugzeug1[2]);
+
+            Random gene = new Random();
+            //Bsp für die Verwendung einer Erweiterungsmethode (s.u.)
+            Console.WriteLine(gene.NextInclusive(1, 5));
+
             Console.ReadKey();
         }
 
@@ -251,6 +273,16 @@ namespace TesteFahrzeugpark
             }
             else
                 Console.WriteLine("Keines der Fahrzeuge kann ein Fahrzeug transportieren.");
+        }
+    }
+
+    public static class Hilfsmethoden
+    {
+        //Mittels des THIS-Stichworts in der Parameterübergabe kann eine Methode als Erweiterungsmethode einer Klasse definiert
+        //werden. Diese muss in einer statischen Klasse beschrieben werden und wird dann als Teil der zugeordneten Klasse betrachtet.
+        public static int NextInclusive(this Random generator, int untergrenze, int obergrenze)
+        {
+            return generator.Next(untergrenze, obergrenze + 1);
         }
     }
 }

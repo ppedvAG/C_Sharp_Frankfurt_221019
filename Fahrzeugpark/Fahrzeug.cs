@@ -18,6 +18,18 @@ namespace Fahrzeugpark
         {
             return "Es wurden " + AnzahlFahrzeuge + " Fahrzeuge produziert.";
         }
+
+        //Mittels des OPERATOR-Stichworts können für einzelne Klassen Operatoren definiert werden
+        //(Für Verwendung siehe TesteFahrzeugpark)
+        public static bool operator ==(Fahrzeug fz1, Fahrzeug fz2)
+        {
+            return fz1.Equals(fz2);
+        } 
+
+        public static bool operator !=(Fahrzeug fz1, Fahrzeug fz2)
+        {
+            return !fz1.Equals(fz2);
+        }
         #endregion
 
         #region Felder und Eigenschaften
@@ -29,7 +41,7 @@ namespace Fahrzeugpark
         public int MaxGeschwindigkeit
         {
             get { return maxGeschwindigkeit; }
-            private set
+            set
             {
                 //Das Schlüsselwort VALUE beschreibt in einer Set-Methode den übergebenen Wert
                 if (value >= 0)
